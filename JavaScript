@@ -1,0 +1,14 @@
+// ملف script.js
+document.getElementById('joinForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const age = document.getElementById('age').value;
+    const experience = document.getElementById('experience').value;
+
+    if (name && age && experience) {
+        alert('تم تقديم طلبك بنجاح! سنتواصل معك قريبًا.');
+        document.getElementById('joinForm').reset();
+    } else {
+        alert('يرجى ملء جميع الحقول.');
+    }
+});
